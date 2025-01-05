@@ -24,4 +24,14 @@ export const GlobalStyles = createGlobalStyle`
         color: inherit;
     }
 
+    body{
+        background-color:#161A1E;
+        padding-inline:7%;
+        padding-block: 32px;
+        font-family: "Inter", serif;
+
+        @media screen and (width>375px){
+            padding-inline:180px;
+        }
+    }
 `;

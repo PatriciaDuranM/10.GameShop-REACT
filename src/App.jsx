@@ -7,7 +7,6 @@ const App = () => {
 		<BrowserRouter>
 			<GlobalStyles />
 			<Router />
-			<h1>React router</h1>
 		</BrowserRouter>
 	);
 };
