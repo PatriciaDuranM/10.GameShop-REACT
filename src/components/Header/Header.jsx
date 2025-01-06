@@ -10,6 +10,7 @@ import {
 	StyledNumberCheck,
 	StyledOption
 } from './header.styles';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 	const [menuOpen, setMenuOpen] = useState(false);
@@ -46,12 +47,18 @@ const Header = () => {
 			</StyledDiv>
 			<nav>
 				<StyledMenu $menuOpen={menuOpen}>
-					<StyledOption>Home</StyledOption>
-					<StyledOption>Game Store</StyledOption>
-					<StyledOption>
-						Checkout
-						<StyledNumberCheck>0</StyledNumberCheck>
-					</StyledOption>
+					<Link to='/'>
+						<StyledOption>Home</StyledOption>
+					</Link>
+					<Link to='/store'>
+						<StyledOption>Game Store</StyledOption>
+					</Link>
+					<Link to='/chekckout'>
+						<StyledOption>
+							Checkout
+							<StyledNumberCheck>0</StyledNumberCheck>
+						</StyledOption>
+					</Link>
 				</StyledMenu>
 			</nav>
 		</StyledHeader>
