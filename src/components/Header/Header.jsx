@@ -34,16 +34,16 @@ const Header = () => {
 				<StyledContainer>
 					<StyledBurger
 						onClick={() => setMenuOpen(!menuOpen)}
-						src='/assets/images/hamburguer.svg'
+						src={
+							menuOpen
+								? '/assets/images/cross.svg'
+								: '/assets/images/hamburguer.svg'
+						}
 						alt='Menu'
 					/>
 					<StyledNumberBurger>0</StyledNumberBurger>
 				</StyledContainer>
-				<StyledCross
-					onClick={() => setMenuOpen(menuOpen)}
-					src='/assets/images/cross.svg'
-					alt='Close Menu'
-				/>
+				<StyledCross onClick={() => setMenuOpen(menuOpen)} alt='Close Menu' />
 			</StyledDiv>
 			<nav>
 				<StyledMenu $menuOpen={menuOpen}>
@@ -56,7 +56,7 @@ const Header = () => {
 					<Link to='/chekckout'>
 						<StyledOption>
 							Checkout
-							<StyledNumberCheck>0</StyledNumberCheck>
+							<StyledNumberBurger>0</StyledNumberBurger>
 						</StyledOption>
 					</Link>
 				</StyledMenu>

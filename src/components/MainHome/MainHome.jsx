@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
 	StyledButton,
 	StyledMain,
@@ -13,11 +14,11 @@ const MainHome = () => {
 				<picture>
 					<source
 						media='(min-width: 400px)'
-						srcSet='/assets/images/logos/logo-desktop.png'
+						srcSet='/assets/images/banner-desktop.jpg'
 					/>
 					<source
 						media='(min-width: 360px)'
-						srcSet='/assets/images/logos/logo-mobile.png'
+						srcSet='/assets/images/banner-mobile.jpg'
 					/>
 					<img src='/assets/images/banner-mobile.jpg' />
 				</picture>
@@ -31,9 +32,9 @@ const MainHome = () => {
 					shopping experience. Level up your gaming experience today! Explore,
 					shop, and play like never before.
 				</StyledText>
-				<link to='/store'>
+				<Link to='/store'>
 					<StyledButton>Go To Game Store</StyledButton>
-				</link>
+				</Link>
 			</StyledMain>
 		</>
 	);

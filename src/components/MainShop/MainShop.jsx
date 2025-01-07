@@ -11,9 +11,11 @@ import {
 const MainShop = () => {
 	return (
 		<StyledMain>
-			<StyledSearch type='text' placeholder='Search your game...'>
-				<StyledSearchIcon src='/assets/images/search.svg' />
-			</StyledSearch>
+			<StyledSearch
+				type='text'
+				placeholder='Search your game...'
+			></StyledSearch>
+			<StyledSearchIcon src='/assets/images/search.svg' />
 			<StyledBox>
 				<StyledPlatformBox></StyledPlatformBox>
 				<StyledGamexBox>
