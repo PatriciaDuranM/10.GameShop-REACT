@@ -54,6 +54,7 @@ const StyledBuy = styled.button`
 	border-radius: 16px;
 	font-size: 18px;
 	font-weight: ${FONT_WEIGHT.bold};
+	border: none;
 
 	@media screen and (width>400px) {
 		width: 200px;
@@ -65,6 +66,7 @@ const StyledBuy = styled.button`
 const StyledCartBox = styled.div`
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 	gap: 16px;
 
 	@media screen and (width>400px) {
@@ -83,6 +85,9 @@ const StyledInCart = styled.button`
 	padding-block: 10px;
 	padding-inline: 20px;
 	text-align: center;
+	border: none;
+	border-radius: 16px;
+	color: white;
 
 	@media screen and (width>400px) {
 		width: 162px;

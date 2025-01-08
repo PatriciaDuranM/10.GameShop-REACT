@@ -135,7 +135,7 @@ export const GAMES = [
 		platform: 'PS4',
 		releaseDate: '19/06/2020',
 		price: 29.99,
-		image: '/assets/images/games/the-last-of-us-2.jpg'
+		image: '/assets/images/games/last-of-us-2.jpg'
 	},
 	{
 		id: v4(),

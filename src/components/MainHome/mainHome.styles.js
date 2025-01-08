@@ -39,6 +39,7 @@ const StyledButton = styled.button`
 	padding-inline: 20px;
 	padding-block: 10px;
 	color: white;
+	border: none;
 `;
 
 export { StyledMain, StyledTitle, StyledText, StyledButton };

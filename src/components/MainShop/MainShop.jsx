@@ -1,3 +1,4 @@
+import { GAMES } from '../../constants/games-info';
 import Game from '../game/Game';
 import { StyledMain } from '../MainHome/mainHome.styles';
 import {
@@ -19,7 +20,9 @@ const MainShop = () => {
 			<StyledBox>
 				<StyledPlatformBox></StyledPlatformBox>
 				<StyledGamexBox>
-					<Game></Game>
+					{GAMES.map(game => (
+						<Game key={game.id} game={game} />
+					))}
 				</StyledGamexBox>
 			</StyledBox>
 		</StyledMain>

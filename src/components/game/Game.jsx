@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import {
 	StyledBox,
 	StyledBuy,
@@ -7,17 +8,31 @@ import {
 	StyledInCart,
 	StyledTitle
 } from './game.styles';
+import { CartContext } from '../../Contexts/CartContext';
 
-const Game = () => {
+const Game = ({ game }) => {
+	const { addToCart, cart, removeGame } = useContext(CartContext);
+
+	const gameInCart = cart.find(games => games.id === game.id);
+
 	return (
 		<StyledBox>
-			<StyledTitle>GameTitle</StyledTitle>
-			<StyledImg />
-			<StyledBuy>Buy - $</StyledBuy>
-			<StyledCartBox>
-				<StyledInCart>In Cart</StyledInCart>
-				<StyledDelete src='/assets/images/trash.svg' />
-			</StyledCartBox>
+			<StyledTitle>{game.title}</StyledTitle>
+			<StyledImg src={game.image} />
+			{!gameInCart && (
+				<StyledBuy onClick={() => addToCart(game)}>
+					Buy - ${game.price}
+				</StyledBuy>
+			)}
+			{gameInCart && (
+				<StyledCartBox>
+					<StyledInCart>In Cart</StyledInCart>
+					<StyledDelete
+						onClick={() => removeGame(game)}
+						src='/assets/images/trash.svg'
+					/>
+				</StyledCartBox>
+			)}
 		</StyledBox>
 	);
 };
